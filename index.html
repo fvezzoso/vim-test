@@ -12,7 +12,7 @@
       window.vimAsyncInit = function() {
         Vim('9be5e0fa-65c5-44ea-9a86-7b4fd41590e3', { env: 'production' })
           .then(function(vim) {
-            console.log(vim);
+            window.vim = vim;
           })
           .catch(function(error) {
             console.log(error);
