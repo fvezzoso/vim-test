@@ -8,6 +8,19 @@
     <title></title>
   </head>
   <body>
-	<script src="index.js"></script>
+    <script>
+      window.vimAsyncInit = function() {
+        Vim('9be5e0fa-65c5-44ea-9a86-7b4fd41590e3', { env: 'production' })
+          .then(function(vim) {
+            console.log(vim);
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+      };
+    </script>
+    <script async defer src="https://js.getvim.com/production/sdk.js"></script>
+    
+	// <script src="index.js"></script>
   </body>
 </html>
